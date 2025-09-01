@@ -61,10 +61,6 @@ A weighted cross-entropy loss function emphasizes tokens according to their:
 - **Order Information**: Temporal sequence of attention flow
 - **Complexity Factors**: Semantic complexity and cognitive load
 
-The weight calculation follows:
-```python
-weight = base_weight + (1.0 / attention_order)
-```
 
 ## Getting Started
 
@@ -161,15 +157,6 @@ python ablation_study/llama_non_cover.py --seed 42
 
 ## Experimental Results
 
-### Performance Improvements
-
-| Model | Task | Metric | Baseline | ScanCoder | Improvement |
-|-------|------|--------|----------|-----------|-------------|
-| Llama-3.2 | Completion | CrystalBLEU | 26.65 | 65.90 | +39.25 |
-| Llama-3.2 | Completion | CodeBLEU | 19.47 | 60.48 | +41.01 |
-| Llama-3.2 | Summarization | BERTScore | 33.41 | 50.30 | +16.89 |
-| DeepSeek | Completion | CrystalBLEU | 18.98 | 54.61 | +35.63 |
-| DeepSeek | Summarization | BERTScore | 28.64 | 50.57 | +21.93 |
 
 ### Attention Mechanism Analysis
 
@@ -202,40 +189,6 @@ The framework ensures deterministic results through:
 - NumPy random state control
 - CUDA deterministic operations
 
-## Limitations and Future Work
-
-### Current Limitations
-
-1. **Limited Scanpaths**: Initial eye-tracking data from 48 participants, reduced to 15-30 scanpaths per stimulus after quality assurance
-2. **Code Complexity**: Evaluation on relatively short code snippets suitable for controlled experiments
-3. **Individual Differences**: Learns average attention patterns, potentially missing personalized cognitive strategies
-
-### Future Directions
-
-1. **Extended Code Complexity**: Adaptation to longer functions and complex class hierarchies
-2. **Personalized Guidance**: Individual programmer profile-based cognitive guidance
-3. **Additional SE Tasks**: Extension to bug detection, refactoring, and code review tasks
-
-## Citation
-
-If you use this code or find our work helpful, please cite:
-
-```bibtex
-@inproceedings{scancoder2025,
-    title={ScanCoder: Leveraging Human Attention Pattern to Enhance LLM for Coding},
-    author={Anonymous Author(s)},
-    booktitle={Proceedings of FSE 2026},
-    year={2025}
-}
-```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For questions about the implementation or paper, please contact the authors or open an issue in this repository.
 
 ## Acknowledgments
 
