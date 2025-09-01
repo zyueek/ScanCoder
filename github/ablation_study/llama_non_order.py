@@ -31,7 +31,6 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 MODEL_ID = "meta-llama/Llama-3.2-1B"
 MODEL_NAME = "llama"
-AUTH_TOKEN = "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" # Replace with your token
 
 DATA_FOLDER = "./"
 OUTPUT_DIR = f"./{MODEL_NAME}_advanced_final_{TASK}_non_order"

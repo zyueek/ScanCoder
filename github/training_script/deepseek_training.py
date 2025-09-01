@@ -31,7 +31,6 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 MODEL_ID = "deepseek-ai/deepseek-coder-1.3b-base"
 MODEL_NAME = "deepseek"
-AUTH_TOKEN = "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" # Replace with your token
 
 DATA_FOLDER = "./"
 OUTPUT_DIR = f"./{MODEL_NAME}_advanced_final_{TASK}"
